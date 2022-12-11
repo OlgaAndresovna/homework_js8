@@ -13,18 +13,19 @@ window.addEventListener('load', () => console.log("страница загруз
 Класс "super_element" присутствует в элементе "div".
 сообщение должно определять присутствует или отсутствует класс "super_element" у элемента, а также выводить в нижнем регистре верный тег в данной строке, по которому был совершен клик.
 Необходимо использовать делегирование.
-*/
 
 document.body.addEventListener('click', event => {
     const elSuperElement = event.target.classList.contains('super_element')
         ? 'присутствует' : 'отсутствует';
     console.log(`Класс "super_element" ${elSuperElement} в элементе "${event.target.tagName.toLowerCase()}"`);
 });
+*/
 
-/*
-4. Сделайте, чтобы при наведении на textarea в консоли появлялось сообщение:
+/* 4. Сделайте, чтобы при наведении на textarea в консоли появлялось сообщение:
 "Вы навели на textarea."
 */
+document.querySelector('textarea').addEventListener('mouseover', () =>
+console.log('Вы навели на textarea'));
 
 /*
 5. Необходимо повесить событие клика на тег ul. В обработчике события в
